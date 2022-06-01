@@ -1,0 +1,268 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*------------------intro------------------------*/
+.intro{
+	padding-top: 3em;
+	display: grid;
+	width: min-content;
+	margin: 0 auto;
+	line-height: 1.5em;
+}
+.section_subtitle{
+	margin-left: 20px;
+	width:200px;
+	background-color: darkcyan;
+	color: white;
+	font-size: 1.2em;
+}
+.section_title{
+	margin-left: 20px;
+
+}
+.intro_img{
+	width: 249px;
+	height: auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	margin-bottom: 2em;
+}
+
+/*-----------------------intro end--------------------------*/
+
+
+/*------------------------services---------------------------*/
+.services{
+	background-color: black;
+	opacity: 0.8;
+	text-align: center;
+	color: white;
+	padding: 1em;
+}
+.service_title::after{
+		content: '';
+		width: 3em;
+		height: 1px;
+		display: block;
+		margin: 0.5em auto 1em;
+		background: white;
+		opacity: 0.25;
+	}
+
+/*---------------About me-------------------*/
+.about_me{
+	grid-template-areas: 
+		"title"
+		"subtitle"
+		"img"
+		"text";
+	padding-top: 3em;
+	display: grid;
+	width: min-content;
+	margin: 0 auto;
+	line-height: 1.5em;
+	text-align: center;
+}
+.about_me_title{
+	font-weight: bolder;
+ 	grid-area: title;	
+ 	font-size: 2.5em;
+}
+.about_me_subtitle{
+	grid-area: subtitle;
+	background-color: darkcyan;
+	color: white;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.about_me_text{
+	padding: 2em 0;
+	grid-area: text;
+}
+.about_me_img{
+	grid-area: img;
+	width: 244px;
+	height: 400px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/*---------------About me end-------------------*/
+
+/*---------------My work ---------------------*/
+.work{
+	background-color: #2E2E2E;
+}
+.my_work{
+	text-align: center;
+	color: white;
+	padding: 5em 0;
+}
+.my_work_img{
+	width: 240px;
+	height: 240px;
+}
+.my_work_img:hover{
+	transform: scale(1.03);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	transition: all .5s ease-in-out;
+}
+.my_work_subtitle{
+	color: cyan;
+}
+/*---------------My wok end-------------------*/
+
+/*---------------my contact--------------------*/
+.contact{
+	background-color: #141414;
+	color: cyan;
+	text-align: center;
+	padding: 2em 0;
+}
+.icons>*{
+	padding: 0 1em;
+}
+/*----------------my contact end---------------*/
+
+@media (min-width: 600px){
+
+/*-------------------------intro-----------------*/
+	.intro{
+		grid-row-gap: 0.5em;
+		display: grid;
+		width: min-content;
+		position: relative;
+		margin: 0 auto;
+		/*grid-column-gap: -16px ;*/
+		grid-template-areas: 
+			"img title"
+			"img subtitle";
+		grid-template-columns: min-content max-content;
+
+	}
+	.intro_img{
+		grid-area: img;
+		min-width: 250px;
+		z-index: 1;
+	}
+	.section_title{
+		justify-items: start;
+		padding: -15px;
+		margin-top: 2em;
+		align-self: end;
+	}
+
+	.section_subtitle{
+		height: 1em;
+		font-size: 1.7em;
+		left: -1.2em;
+		/*padding-left: 2em;*/
+		position: absolute;
+		grid-column: -1/1;
+		align-self: start;
+		grid-row: 2;
+		width: calc(100% + 0.5em);
+		text-align: right;
+	}
+
+/*---------------------------intro end------------------------*/
+
+/*---------------------------services-----------------------*/
+	.services{
+		display: grid;
+		grid-template-areas: 
+			"hd hd hd"
+			"sd pd dd"
+			"aa aa aa";
+		padding: 1.5em;
+		background: url(img/services-bg.jpg);
+		background-size: cover;
+		background-blend-mode: multiply;
+	}
+	.service_title{
+		padding: 1.2em;
+		grid-area: hd;
+	}
+	.service1{
+		padding: 1.2em;
+		grid-area: sd;
+	}
+	.service2{
+		padding: 1.2em;
+		grid-area: pd;
+	}
+	.service3{
+		padding: 1.2em;
+		grid-area: dd;
+	}
+	.service_button{
+		padding: 1.2em;
+		grid-area: aa;
+	}
+	.service_title::after{
+		content: '';
+		width: 3em;
+		height: 1px;
+		display: block;
+		margin: 0.5em auto 1em;
+		background: white;
+		opacity: 0.9;
+	}
+
+	/*-----------------------services end------------*/
+
+	/*---------------About me-------------------*/
+	.about_me{
+		padding-top: 5em;
+		padding-bottom: 5em;
+		display: grid;
+		grid-template-areas: 
+			"title img"
+			"subtitle img"
+			"text img";
+		width: min-content;
+		position: relative;
+		margin: 0 auto;
+		grid-template-columns: min-content min-content;
+		grid-column-gap: 1em;
+		text-align: left;
+	}
+	.about_me_title{
+		align-self: end;
+		width: max-content;
+		grid-area: title;
+		margin-top: 1em;
+		
+	}
+	.about_me_subtitle{
+		background-color: darkcyan;
+		grid-column: -1/1 ;
+		left: -2.5em;
+		position: absolute;
+		align-self:end;
+		grid-area: subtitle;
+		width:calc(100% + 15em);
+		height: 2em;
+		color: white;
+		line-height: 2em;
+		padding-left: 2.5em;
+		font-size: 1.5em;
+		box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+	}
+	.about_me_text{
+		align-self: end;
+		width: 450px;
+		height: 229px;
+		grid-area: text;
+	}
+	.about_me_img{
+		position: relative;
+		grid-area: img;
+		width: 244px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+	
+/*---------------About me end-------------------*/
+
+}
